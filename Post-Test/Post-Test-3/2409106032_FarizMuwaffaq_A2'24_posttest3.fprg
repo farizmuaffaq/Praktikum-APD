@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106032_FarizMuwaffaq_A2'24_posttest3"/>
+        <attribute name="authors" value="USER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-24 02:11:57 PM"/>
+        <attribute name="created" value="VVNFUjtXUExVUzsyMDI0LTA5LTIyOzEyOjMwOjQ5IEFNOzE5OTk="/>
+        <attribute name="edited" value="VVNFUjtXUExVUzsyMDI0LTA5LTI0OzAxOjU2OjA5IFBNOzE7VVNFUjtERVNLVE9QLTJFQVVHSTM7MjAyNC0wOS0xNjswMS4xMy4yOSBQTTsyNDA5MTA2MDMyX0Zhcml6TXV3YWZmYXFfQTInMjRfcG9zdHRlc3QyLmZwcmc7ODY3OQ=="/>
+        <attribute name="edited" value="VVNFUjtXUExVUzsyMDI0LTA5LTI0OzAxOjU3OjUzIFBNOzI7dXNlcjtVU0VSMTsyMDI0LTA5LTA4OzExLjUyLjM5IEFNO0Zsb3djaGFydDI0MDkxMDYwMzJfRmFyaXpNdXdhZmZhcV9BMicyNC5mcHJnOzgwMTE="/>
+        <attribute name="edited" value="VVNFUjtXUExVUzsyMDI0LTA5LTI0OzAyOjExOjU3IFBNOzQ7MjEyNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="BanyakPinjaman, LamaPinjaman, JumlahBulan, TotalCicilanPerbulan" type="Integer" array="False" size=""/>
+            <declare name="BungaPerBulan, BungaPerTahun" type="Real" array="False" size=""/>
+            <declare name="Nama, NIM" type="String" array="False" size=""/>
+            <output expression="&quot;Masukkan nama!&quot;" newline="True"/>
+            <input variable="Nama"/>
+            <output expression="&quot;Masukkan NIM!&quot;" newline="True"/>
+            <input variable="NIM"/>
+            <output expression="&quot;Masukkan jumlah pinjaman!&quot;" newline="True"/>
+            <input variable="BanyakPinjaman"/>
+            <output expression="&quot;Masukkan seberapa lama pinjaman!(tahun)&quot;" newline="True"/>
+            <input variable="LamaPinjaman"/>
+            <assign variable="JumlahBulan" expression="12 * LamaPinjaman"/>
+            <if expression="LamaPinjaman == 1">
+                <then>
+                    <assign variable="BungaPerTahun" expression="7 / 100"/>
+                    <assign variable="BungaPerBulan" expression="( BungaPerTahun / 12 ) * BanyakPinjaman"/>
+                    <assign variable="TotalCicilanPerBulan" expression="( BanyakPinjaman + BungaPerBulan ) / JumlahBulan"/>
+                    <output expression="&quot;Nama kamu adalah &quot; &amp; Nama &amp; &quot;. Dengan NIM &quot; &amp; NIM" newline="True"/>
+                    <output expression="&quot;Cicilan perbulan yang harus kamu bayar adalah &quot; &amp; TotalCicilanPerBulan" newline="False"/>
+                </then>
+                <else>
+                    <if expression="LamaPinjaman == 2">
+                        <then>
+                            <assign variable="BungaPerTahun" expression="13 / 100"/>
+                            <assign variable="BungaPerBulan" expression="( BungaPerTahun / 12 ) * BanyakPinjaman"/>
+                            <assign variable="TotalCicilanPerBulan" expression="( BanyakPinjaman + BungaPerBulan ) / JumlahBulan"/>
+                            <output expression="&quot;Nama kamu adalah &quot; &amp; Nama &amp; &quot;. Dengan NIM &quot; &amp; NIM" newline="True"/>
+                            <output expression="&quot;Cicilan perbulan yang harus kamu bayar adalah &quot; &amp; TotalCicilanPerBulan" newline="False"/>
+                        </then>
+                        <else>
+                            <if expression="LamaPinjaman == 3">
+                                <then>
+                                    <assign variable="BungaPerTahun" expression="19 / 100"/>
+                                    <assign variable="BungaPerBulan" expression="( BungaPerTahun / 12 ) * BanyakPinjaman"/>
+                                    <assign variable="TotalCicilanPerBulan" expression="( BanyakPinjaman + BungaPerBulan ) / JumlahBulan"/>
+                                    <output expression="&quot;Nama kamu adalah &quot; &amp; Nama &amp; &quot;. Dengan NIM &quot; &amp; NIM" newline="True"/>
+                                    <output expression="&quot;Cicilan perbulan yang harus kamu bayar adalah &quot; &amp; TotalCicilanPerBulan" newline="False"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
