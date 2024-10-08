@@ -1,6 +1,3 @@
-
-
-
 print(
 """
 =================================================
@@ -19,8 +16,6 @@ print(
 )
 
 Data_Pirate = []
-id_pirate = 1
-
 while True:
     pilih = int(input("PILIH MENU : "))
     if pilih == 1:
@@ -45,15 +40,15 @@ while True:
                 Ras_baru = input("Masukkan Ras Baru : ")
                 Bounty_baru = int(input("Masukkan Bounty Baru : "))
                 while Bounty_baru <= 0:
-                    print("Bounty Tidak Bisa Lebih Kecil Dari 0")
+                    print("Bounty Tidak Bisa Lebih Kecil Dari 1")
                     Bounty_baru = int(input("Masukkan Bounty Baru : "))
                 Data_Pirate[i][0] = Nama_baru
                 Data_Pirate[i][1] = DF_baru
                 Data_Pirate[i][2] = Ras_baru
                 Data_Pirate[i][3] = Bounty_baru
                 break
-        else:
-            print("Data Tidak Ada")
+            else:
+                print("Data Tidak Ada")
     elif pilih == 4:
         if len(Data_Pirate) == 0:
             print("Data Belum Ditambahkan")
