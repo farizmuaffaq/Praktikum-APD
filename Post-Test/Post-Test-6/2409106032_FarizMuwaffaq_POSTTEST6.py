@@ -73,6 +73,8 @@ Bounty : {Data['Bounty']}""")
                     del Data['Ras']
                     del Data['Bounty']
                     print("Data Telah Dihapus")
+                else:
+                    print("Data Tidak Ada")
     elif pilih == 5:
         print("Terima Kasih Telah Mengakses Pusat Data Pirate")
         break
